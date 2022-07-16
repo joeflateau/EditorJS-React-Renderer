@@ -12,6 +12,5 @@
  * @version 1.1.2 - 2022.04.20 - fix console errors (make input readOnly)  - Adombang Munang Mbomndih
  */
 /// <reference types="react" />
-import "./style.css";
 declare const ChecklistOutput: ({ data, style, classNames, config, }: ErrRendererProps<"checklist">) => "" | JSX.Element;
 export default ChecklistOutput;

@@ -16,7 +16,6 @@
 import classnames from "classnames";
 import parse from "html-react-parser";
 import checklistOutputStyle from "./style";
-import "./style.css";
 //#endregion
 
 const supportedKeys = ["container", "item", "checkbox", "label"];

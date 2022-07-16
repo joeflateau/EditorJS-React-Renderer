@@ -33,10 +33,6 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.css$/,
-        use: ["isomorphic-style-loader", "css-loader"],
-      },
     ],
   },
   resolve: {
