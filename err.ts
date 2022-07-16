@@ -22,6 +22,7 @@ export interface ErrBlockMap {
     text: string;
     level: number;
   };
+  list: { style: "ordered" | "unordered"; items: string[] };
 }
 
 export type ErrBlockTypes = keyof ErrBlockMap;
