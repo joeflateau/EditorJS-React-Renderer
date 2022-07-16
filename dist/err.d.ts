@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 export declare type ErrOutputProps = {
     data: ErrOutputData;
-    renderBlock: <T extends ErrBlockTypes>(block: ErrBlocks, index: number, data: ErrOutputData) => ReactNode;
+    renderBlock: (block: ErrBlocks, index: number, data: ErrOutputData) => ReactNode;
 };
-export declare type ErrBlockTypes = keyof ErrBlockMap;
 export declare type ErrOutputData = {
     blocks: ErrBlocks[];
     time?: number;
@@ -17,7 +16,12 @@ export interface ErrBlockMap {
         text: string;
         level: number;
     };
+    list: {
+        style: "ordered" | "unordered";
+        items: string[];
+    };
 }
+export declare type ErrBlockTypes = keyof ErrBlockMap;
 export declare type ErrBlock<T extends ErrBlockTypes> = {
     type: T;
     data: ErrBlockMap[T];
