@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 export declare type ErrOutputProps = {
     data: ErrOutputData;
-    renderBlock: <T extends ErrBlockTypes>(block: ErrBlock<T>, index: number, data: ErrOutputData) => ReactNode;
+    renderBlock: <T extends ErrBlockTypes>(block: ErrBlocks, index: number, data: ErrOutputData) => ReactNode;
 };
 export declare type ErrBlockTypes = keyof ErrBlockMap;
 export declare type ErrOutputData = {

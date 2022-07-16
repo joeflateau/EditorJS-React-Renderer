@@ -2,14 +2,12 @@ import { ReactNode } from "react";
 
 export type ErrOutputProps = {
   data: ErrOutputData;
-  renderBlock: <T extends ErrBlockTypes>(
-    block: ErrBlock<T>,
+  renderBlock: (
+    block: ErrBlocks,
     index: number,
     data: ErrOutputData
   ) => ReactNode;
 };
-
-export type ErrBlockTypes = keyof ErrBlockMap;
 
 export type ErrOutputData = {
   blocks: ErrBlocks[];
@@ -25,6 +23,8 @@ export interface ErrBlockMap {
     level: number;
   };
 }
+
+export type ErrBlockTypes = keyof ErrBlockMap;
 
 export type ErrBlock<T extends ErrBlockTypes> = {
   type: T;
