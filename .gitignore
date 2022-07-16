@@ -3,3 +3,4 @@ test.js
 *~
 .env*
 .vscode/settings.json
+dist/
