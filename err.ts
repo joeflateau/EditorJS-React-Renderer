@@ -1,22 +1,23 @@
 import { ReactNode } from "react";
 
-export interface ErrOutputProps {
+export type ErrOutputProps = {
   data: ErrOutputData;
   renderBlock: <T extends ErrBlockTypes>(
     block: ErrBlock<T>,
     index: number,
     data: ErrOutputData
   ) => ReactNode;
-}
+};
 
 export type ErrBlockTypes = keyof ErrBlockMap;
 
-export interface ErrOutputData {
-  blocks: ErrBlock<ErrBlockTypes>[];
+export type ErrOutputData = {
+  blocks: ErrBlocks[];
   time?: number;
   version?: string;
-}
+};
 
+// interface so that it can be merged with
 export interface ErrBlockMap {
   paragraph: { text: string };
   header: {
@@ -25,7 +26,11 @@ export interface ErrBlockMap {
   };
 }
 
-export interface ErrBlock<T extends ErrBlockTypes> {
+export type ErrBlock<T extends ErrBlockTypes> = {
   type: T;
   data: ErrBlockMap[T];
-}
+};
+
+export type ErrBlocks = {
+  [K in ErrBlockTypes]: ErrBlock<K>;
+}[ErrBlockTypes];
