@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { ErrOutputProps } from "./err";
 
 export function Output(props: ErrOutputProps): JSX.Element {
@@ -5,7 +6,7 @@ export function Output(props: ErrOutputProps): JSX.Element {
   return (
     <>
       {data.blocks.map((block, i) => {
-        return renderBlock(block, i, data);
+        return <Fragment key={i}>{renderBlock(block, i, data)}</Fragment>;
       })}
     </>
   );

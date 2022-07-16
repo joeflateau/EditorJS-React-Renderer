@@ -23,6 +23,13 @@ export interface ErrBlockMap {
     level: number;
   };
   list: { style: "ordered" | "unordered"; items: string[] };
+  image: {
+    file: { url: string; [key: string]: unknown };
+    caption: string;
+    withBorder: boolean;
+    withBackground: boolean;
+    stretched: boolean;
+  };
 }
 
 export type ErrBlockTypes = keyof ErrBlockMap;
