@@ -30,7 +30,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "release": "release-it"
   },
   "dependencies": {
     "react": "^18.2.0"
@@ -46,6 +47,7 @@
     "@types/react": "^17.0.47",
     "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.2.3",
+    "release-it": "^15.1.2",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.4",
     "webpack": "^5.64.0",
