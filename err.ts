@@ -30,6 +30,16 @@ export interface ErrBlockMap {
     withBackground: boolean;
     stretched: boolean;
   };
+  attaches: {
+    file: {
+      url: string;
+      size: number;
+      name: string;
+      extension: string;
+      [key: string]: unknown;
+    };
+    title: string;
+  };
 }
 
 export type ErrBlockTypes = keyof ErrBlockMap;
