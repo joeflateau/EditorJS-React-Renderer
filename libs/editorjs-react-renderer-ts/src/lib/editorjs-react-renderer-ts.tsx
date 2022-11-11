@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { ErrOutputProps } from './editorjs-react-renderer-types';
 
-export function Output(props: ErrOutputProps): JSX.Element {
+export function EditorJsReactRenderer(props: ErrOutputProps): JSX.Element {
   const { data, renderBlock } = props;
   return (
     <>
@@ -11,5 +11,3 @@ export function Output(props: ErrOutputProps): JSX.Element {
     </>
   );
 }
-
-export default Output;
