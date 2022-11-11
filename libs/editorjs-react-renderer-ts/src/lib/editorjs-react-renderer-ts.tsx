@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { ErrOutputProps } from "./err";
+import { Fragment } from 'react';
+import { ErrOutputProps } from './editorjs-react-renderer-types';
 
 export function Output(props: ErrOutputProps): JSX.Element {
   const { data, renderBlock } = props;
