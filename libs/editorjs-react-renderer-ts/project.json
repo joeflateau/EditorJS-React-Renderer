@@ -41,6 +41,20 @@
         "jestConfig": "libs/editorjs-react-renderer-ts/jest.config.ts",
         "passWithNoTests": true
       }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "postTargets": ["editorjs-react-renderer-ts:deploy"],
+        "trackDeps": true
+      }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   }
 }
